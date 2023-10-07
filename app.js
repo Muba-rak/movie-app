@@ -13,7 +13,11 @@ const main = document.getElementById("main");
 async function getMovies(url) {
   const res = await fetch(url);
   const data = await res.json();
-  displayMovies(data.results);
+  if (data.results.length < 1) {
+    console.log("No movies found for your search");
+  } else {
+    displayMovies(data.results);
+  }
 }
 getMovies(API_URL);
 
@@ -65,9 +69,11 @@ form.addEventListener("submit", (e) => {
     // show search value to the user
     span.textContent = searchVal;
 
-    hiddenSearch.classList.add("show-search");
+    // hiddenSearch.classList.add("show-search");
+    hiddenSearch.style.display = "block";
 
     getMovies(SEARCH_API + searchVal);
+    console.log(getMovies(SEARCH_API + searchVal));
     search.value = "";
   } else {
     window.location.reload();

@@ -1,0 +1,2 @@
+Version Control- is the mgt of changes to our code/computer programs- 
+git - free and open source version control system

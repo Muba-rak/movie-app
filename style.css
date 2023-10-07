@@ -31,6 +31,18 @@ header a {
 }
 .show-search{
     display: block;
+    margin-left: 1rem;
+    font-size: 1.5rem;
+}
+.empty{
+    width: 300px;
+    height: 300px;
+    margin: 10px auto;
+    background-color: aliceblue;
+    padding: 1rem;
+    text-align: center;
+    display: none;
+    border-radius: 7px;
 }
 header h2{
     color: #eee;
